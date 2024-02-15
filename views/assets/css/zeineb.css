@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7D8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+
+}
+
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shaodw: 0 2rem 3rem var(--color-light);
+}
+
+.crudBox {
+
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* 2fr est plus grand que 1fr qui est la taille de groupe box*/
+  grid-gap: 30px;
+  min-width: 600px;
+  min-height: 600px;
+
+
+}
+
+.crudBox .cudBox {
+  /* align-items: center; */
+  position: relative;
+  background: #fff;
+  /*couleur du groupe box*/
+  padding: 20px;
+  width: 100%;
+  /*group box largeur */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  max-width: 400px;
+  max-height: 380px;
+  background: var(--color-white);
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+  min-width: 600px;
+  min-height: 650px;
+
+}
+
+
+.crudBox .rbox {
+
+  position: relative;
+  background: #fff;
+  /*couleur du groupe box*/
+  padding: 20px;
+  width: 150%;
+  /* group box largeur */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  min-width: 850px;
+  min-height: 300px;
+  margin-left: -410px;
+}
+
+
+
+/* Style for all input fields */
+input {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  min-width: 340px;
+}
+
+/* Style for focused input fields */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Style for disabled input fields */
+input:disabled {
+  background-color: var(--color-light);
+  opacity: 0.6;
+}
+
+/* Style pour tous les select */
+select {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--color-dark);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+/* Style pour les options de select */
+option {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* Style pour un select en focus */
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Style for all label elements */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+/* Style for required label elements */
+label[for]:after {
+  content: '*';
+  margin-left: 0.2rem;
+  color: var(--color-danger);
+}
+
+/* Style for label elements with errors */
+label.error {
+  color: var(--color-danger);
+}
+
+textarea {
+  min-width: 340px;
+  min-height: 80px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+}
+
+textarea :focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+
+.form__input {
+  position: absolute;
+  width: 95%;
+  /* width: 80%; */
+  height: 100%;
+  border: 2px solid #ffffffa4;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.form__input:hover {
+  border-color: #ffffffd3;
+}
+
+/* .form__input:focus {
+
+
+} */
+.form__label {
+  position: absolute;
+  left: 1.5rem;
+  top: 0.8rem;
+  padding: 0;
+  /* color: #ffffff93; */
+  background-color: #fff;
+  cursor: text;
+  transition: 250ms cubic-bezier(.79, 0, .16, .99);
+
+}
+
+/* 1. When the input is in the focus state reduce the size of the label and move upwards 2. Keep label state when content is in input field */
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+  padding: 0 0.5rem;
+  color: #12181b;
+}
+
+main .recent-orders {
+  position: relative;
+  margin: 3rem 0 0 0;
+  width: 100%;
+}
+
+main .recent-orders table {
+  width: 100%;
+  margin: 0;
+}
+
+.submitBtn {
+  margin-left: 90px;
+}
+
+.resBtn {
+  margin-left: 90px;
+}
+
+.form {
+  margin-left: 90px;
+}
+
+
+/* *************************** */
+/*charts emplacement*/
+.graphBox {
+
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* 2fr est plus grand que 1fr qui est la taille de groupe box*/
+  grid-gap: 30px;
+  min-width: 200px;
+  min-height: 200px;
+
+}
+
+.graphBox .box1 {
+  position: relative;
+  background: #fff;
+  /*couleur du groupe box*/
+  padding: 20px;
+  width: 100%;
+  /* group box largeur */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  max-width: 400px;
+  max-height: 400px;
+  min-width: 350px;
+  min-height: 350px;
+  margin-left: 100px;
+
+}
+
+@media(max-width:991px) {
+  .graphBox {
+    grid-template-columns: 1fr;
+    height: auto;
+
+
+  }
+
+
+}
+
+/* **************traduction*************** */
+/* :root {
+  --primary-color: #356aff;
+  --bg-color: #f5f5f5;
+  --light-bg-color: #fff;
+  --text-color: #111116;
+  --light-text-color: #cdccd1;
+  --primary-text-color: #fff;
+} */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color);
+}
+
+
+.container {
+  position: relative;
+  width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.container .card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: var(--light-bg-color);
+}
+
+.container .card .from,
+.container .card .to {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.container .card .from {
+  margin-right: 20px;
+}
+
+.container .card .to {
+  margin-left: 20px;
+}
+
+.container .card .heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--light-text-color);
+  white-space: nowrap;
+}
+
+.dropdown-container {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.dropdown-container .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dropdown-container .dropdown-toggle span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.dropdown-container .dropdown-toggle ion-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-container.active .dropdown-toggle {
+  border-radius: 20px 20px 0 0;
+}
+
+.dropdown-container.active .dropdown-toggle ion-icon:last-child {
+  transform: rotate(180deg);
+}
+
+.dropdown-container .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: auto;
+  display: none;
+  padding: 20px;
+  z-index: 1;
+  list-style: none;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  transition: all 1s;
+  border-radius: 0 0 20px 20px;
+}
+
+.dropdown-container .dropdown-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.dropdown-container.active .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-container .dropdown-menu li {
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--light-bg-color);
+  transition: all 0.3s ease;
+}
+
+.dropdown-container .dropdown-menu li:hover {
+  background-color: var(--light-bg-color);
+}
+
+.dropdown-container .dropdown-menu li.active {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.container .text-area {
+  position: relative;
+}
+
+.container textarea {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container .text-area .chars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 0.8rem;
+  color: var(--light-text-color);
+}
+
+.container .center {
+  position: relative;
+}
+
+.swap-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 5px solid var(--bg-color);
+  transition: all 0.3s ease;
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.swap-position ion-icon {
+  font-size: 25px;
+}
+
+.swap-position:hover {
+  transform: translateX(-50%) scale(1.1);
+}
+
+.card-bottom {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+  border-top: 2px solid var(--bg-color);
+}
+
+.card-bottom p {
+  margin-bottom: 20px;
+}
+
+.card-bottom label {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: var(--bg-color);
+}
+
+.card-bottom label:hover {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.card-bottom span {
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.card-bottom ion-icon {
+  font-size: 20px;
+}
+
+.card-bottom button {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  cursor: pointer;
+  background-color: var(--bg-color);
+}
+
+.card-bottom button:hover {
+  color: var(--primary-text-color);
+  background-color: var(--primary-color);
+}
+
+.mode {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.toggle {
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-track {
+  width: 24px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3px 0;
+  justify-content: space-between;
+  border: 1px solid var(--light-text-color);
+  background-color: var(--light-bg-color);
+  transition: all 0.2s ease;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+}
+
+.toggle input:checked~.toggle-thumb {
+  transform: translateY(25px);
+}
+
+.toggle img {
+  width: 20px;
+  height: 20px;
+}
+
+/* media quiries */
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  .container .card {
+    width: 100%;
+  }
+
+  .container .card .from {
+    margin-right: 0;
+  }
+
+  .container .card .to {
+    margin-left: 0;
+  }
+
+  .container .card .from,
+  .container .card .to {
+    flex-direction: column;
+  }
+
+  .swap-position {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .swap-position:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .swap-position ion-icon {
+    transform: rotate(90deg);
+  }
+}

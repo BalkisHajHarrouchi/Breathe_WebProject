@@ -1,0 +1,52 @@
+
+main{
+    margin-top: 1rem;
+}
+.steps__bg{
+    min-height: 600px;
+    margin-top: -80px;
+    margin-left: -100px;
+    margin-right: 40px;
+    
+}
+#calendar{
+   margin-left: 300px;
+   border: solid white 10px;
+}
+a{
+  text-decoration: none;
+}
+/* CSS for aside element */
+aside {
+    background-color: #f0ede9; /* Background color */
+    padding: 20px; /* Padding around the content */
+    margin-top: 45px;
+    margin-right:20px;
+    margin-left: auto; /* Auto margin from the left */
+    width: 200px; /* Width of the aside element */
+    box-sizing: border-box; /* Include padding and border in the width */
+    float: right; 
+    border-radius: 1rem;/* Float the element to the right */
+  }
+  
+  /* CSS for heading inside aside element */
+  
+  /* CSS for links inside aside element */
+  aside a {
+    display: block; /* Make links block-level elements */
+    padding: 10px 0; /* Add padding around the links */
+    text-decoration: none; /* Remove underline from links */
+    color: #000; 
+    /* border-radius: 1rem;Set link color */
+  }
+  
+  /* CSS for links inside aside element on hover */
+  aside a:hover {
+    background-color: #FFF;
+    margin-top: 5px;
+    border-radius: .6rem; /*Change background color on hover*/
+  }
+.events__card{
+    margin-left: 20px;
+    min-height: 560px;
+}

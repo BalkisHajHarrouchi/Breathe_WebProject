@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #7380ec;
+  --color-danger: #ff7782;
+  --color-success: #68f386;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7D8da1;
+  --color-info-light: #dce1eb;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+
+
+}
+
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shaodw: 0 2rem 3rem var(--color-light);
+}
+
+.crudBox {
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+  /* 2fr est plus grand que 1fr qui est la taille de groupe box*/
+  grid-gap: 30px;
+  min-width: 400px !important;
+  min-height: 600px;
+
+
+
+  margin-left: 50px;
+
+}
+
+.crudBox .cudBox {
+
+  position: relative;
+  /*couleur du groupe box*/
+  padding: 20px;
+  width: 100%;
+  /* group box largeur // */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  max-width: 500px;
+  min-height: 200px;
+  background: #fff;
+  align-items: center;
+  margin-right: -60px;
+
+}
+
+.cudBox2 {
+  position: relative;
+  /*couleur du groupe box*/
+  padding: 20px;
+  /* width: 120%; */
+  /* group box largeur // */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  min-width: 600px;
+  min-height: 400px;
+  background: #fff;
+  align-items: center;
+  margin-right: -60px;
+  /* margin-left: 150px; */
+}
+
+.crudBox .tableEvent {
+
+
+  margin-left: -60px;
+
+}
+
+.crudBox2 {
+
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* 2fr est plus grand que 1fr qui est la taille de groupe box*/
+  grid-gap: 100px;
+  min-width: 600px !important;
+  min-height: 300px;
+  margin-left: -450px;
+  /* background-color: red !important; */
+
+}
+
+.crudBox2 h1 {
+  margin-bottom: -200px;
+}
+
+.crudBox2 .cudBox2 {
+
+  position: relative;
+  /*couleur du groupe box*/
+  padding: 20px;
+  width: 100%;
+  /* group box largeur // */
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  min-width: 310px;
+  min-height: 500px;
+  max-height: 700px;
+  background: #fff;
+  align-items: center;
+  margin-right: -60px;
+  margin-top: -60px;
+}
+
+.crudBox2 .recent-orders {
+  margin-top: -60px;
+  min-width: 550px;
+}
+
+.crudBox2 input {
+  min-width: 250px;
+}
+
+.affiche {
+  margin-bottom: -45px;
+  margin-left: -410px;
+}
+
+.afficheTab {
+  margin-left: -420px;
+  margin-top: -50px;
+}
+
+.ticketbuttons {
+  margin-left: 10px;
+  margin-top: 80px;
+}
+
+/* Style for all input fields */
+input {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  min-width: 340px;
+
+}
+
+.sortbtn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  min-width: 150px;
+  background-color: #7380ec;
+
+}
+
+
+
+/* Style for focused input fields */
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Style for disabled input fields */
+input:disabled {
+  background-color: var(--color-light);
+  opacity: 0.6;
+}
+
+
+/* Style pour tous les select */
+select {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: var(--border-radius-1);
+  box-shadow: var(--box-shadow);
+  font-size: 1rem;
+  background-color: #fff;
+  color: var(--color-dark);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+/* Style pour les options de select */
+option {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+/* Style pour un select en focus */
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-success);
+}
+
+/* Style for all label elements */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+/* Style for required label elements */
+label[for]:after {
+  content: '*';
+  margin-left: 0.2rem;
+  color: var(--color-danger);
+}
+
+/* Style for label elements with errors */
+label.error {
+  color: var(--color-danger);
+}
+
+textarea {
+  min-width: 340px;
+  min-height: 80px;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+}
+
+textarea :focus {
+  box-shadow: 0 0 0 2px var(--color-primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+
+.form__input {
+  position: absolute;
+  width: 95%;
+  /* width: 80%; */
+  height: 100%;
+  border: 2px solid #ffffffa4;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.form__input:hover {
+  border-color: #ffffffd3;
+}
+
+.form__label {
+  position: absolute;
+  left: 1.5rem;
+  top: 0.8rem;
+  padding: 0;
+  /* color: #ffffff93; */
+  background-color: #fff;
+  cursor: text;
+  transition: 250ms cubic-bezier(.79, 0, .16, .99);
+
+}
+
+/* 1. When the input is in the focus state reduce the size of the label and move upwards 2. Keep label state when content is in input field */
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus)~.form__label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+  padding: 0 0.5rem;
+  color: #12181b;
+}
+
+main .recent-orders {
+  position: relative;
+  /* min-width: 1000px !important; */
+  margin: 3rem 0 0 0;
+  width: 100%;
+}
+
+main .recent-orders table {
+  min-width: 500px !important;
+  margin: 0;
+}
